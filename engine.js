@@ -14,7 +14,7 @@ let data = {
 
   // Verifica se o ano é bissexto.
 
-  function verificaSeAnoBissexto(ano) {
+  function verificaSeAnoBissexto(ano) { 
 
     return ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0);
 
