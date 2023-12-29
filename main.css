@@ -26,7 +26,6 @@
     padding: 1.5rem ;
     position: fixed;
   }
-  
   .container {
     background-color: #fff;
     padding: 1.5rem;
@@ -49,3 +48,25 @@
     color: #555;
   }
   
+  form {
+    margin-top: 1.5rem;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .destaque {
+    font-weight: 700;
+  }
