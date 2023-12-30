@@ -145,9 +145,6 @@ function aumentaData () {
 
 
 function mostrarResultados(data) {
-  //let data = obterData();
-  //let data = aumentaData();
-  //let data = diminuiData();
   let nomeDoMes = converteNomeMes(data.mes);
   // Obtém a quantidade de dias no mês
   let quantidadeDias = verificaQuantidadeDiasMes(data.mes, data.ano);
