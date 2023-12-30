@@ -6,31 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.css"> 
   <title>Operações com Data em JavaScript</title> 
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
 <body>
-    <div class="container">
+  <div class="container">
     <h1>Operações com Data em JavaScript</h1>
     <div class="input">
       <form>
         <label for="dataInput">Data: </label>
         <input type="date" id="dataInput" name="dataInput">
-        
-        <div>
-          <button type="button" onclick="mostraData()">carregar</button>
-          <button type="button" onclick="aumentaData()">▲</button>
-          <button type="button" onclick="diminuiData()">▼</button>
-        </div>
+        <button id="carregar" class="mostrar desligado" type="button" onclick="recebeData()"><i class="fas fa-calendar"></i> Carregar</button>
+        <button id="aumentar" class="esconder" type="button" onclick="aumentaData()"><i class="fas fa-chevron-up"></i></button>
+        <button id="diminuir" class="esconder" type="button" onclick="diminuiData()"><i class="fas fa-chevron-down"></i></button>
       </form>
     </div>    
-    <div class="output">
+    <div>
       <p id="outputText"></p>
-      <ul>
-        <li id="qualSemana"></li>
-        <li id="quantosDias"></li>
-        <li id="anoBisexto"></li>
+      <ul class="output">
+        <li><span id="qualSemana"></span></li>
+        <li><span id="quantosDias"></span></li>
+        <li><span id="anoBisexto"></span></li>
       </ul>
     </div>
   </div>
   <script src="engine.js"></script>
+  <script src="interface.js"></script>
 </body>
 </html>

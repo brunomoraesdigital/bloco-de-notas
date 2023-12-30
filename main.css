@@ -1,72 +1,93 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
-    user-select: none;
-    outline: none;
-    /*list-style: none;*/
-  }
-  html {
-    width: 100vw;
-    height: 100vh;
-  }
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    padding: 1.5rem ;
-    position: fixed;
-  }
-  .container {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  .output {
-    margin-top: 1rem;
-  }
-  
-  #qualSemana, 
-  #quantosDias,
-  #anoBisexto {
-    font-size: 0.7rem;
-    color: #555;
-  }
-  
-  form {
-    margin-top: 1.5rem;
-  }
-  
-  button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+}
 
-  .destaque {
-    font-weight: 700;
-  }
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+  width: 300px; /* Defina a largura desejada para o container */
+}
+
+h1 {
+  color: #333;
+}
+
+.output {
+  margin-top: 1rem;
+}
+
+#qualSemana, #quantosDias, #anoBisexto {
+  font-size: 0.7rem;
+  color: #555;
+}
+
+form {
+  margin-top: 1.5rem;
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.destaque {
+  font-weight: 700;
+}
+
+/* Adiciona estilo ao input do tipo date */
+input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+}
+
+/* Estilo para os botões de seta */
+button[type="button"] {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.mostrar {
+  display: flex;
+}
+.esconder {
+  display: none;
+}
+
+.desligado {
+  background-color: #d1d1d1;
+}
