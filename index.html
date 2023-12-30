@@ -14,9 +14,14 @@
       <form>
         <label for="dataInput">Data: </label>
         <input type="date" id="dataInput" name="dataInput">
-        <button type="button" onclick="mostrarResultados()">carregar</button>
+        
+        <div>
+          <button type="button" onclick="mostraData()">carregar</button>
+          <button type="button" onclick="aumentaData()">▲</button>
+          <button type="button" onclick="diminuiData()">▼</button>
+        </div>
       </form>
-    </div>
+    </div>    
     <div class="output">
       <p id="outputText"></p>
       <ul>

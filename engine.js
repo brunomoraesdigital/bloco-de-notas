@@ -1,3 +1,4 @@
+// recebe a data
 function obterData() {
   let dataSelecionada = document.getElementById('dataInput').value;
   let partesData = dataSelecionada.split('-');
@@ -8,6 +9,8 @@ function obterData() {
   };
   return data;
 }
+
+
 
 // Verifica se o ano é bissexto.
 function verificaSeAnoBissexto(ano) {
@@ -65,6 +68,7 @@ function verificaDiaSemanaQualquerData(dia, mes, ano) {
       return 'algo deu errado: 1';
   }
 }
+// passa o número do mes para o seu respectivo nome
 function converteNomeMes(mes) {
   let nomeDoMes =
     mes === 1 ? 'janeiro' :
@@ -83,18 +87,73 @@ function converteNomeMes(mes) {
   return nomeDoMes;
 }
 
-function mostrarResultados() {
+
+// data atual
+function mostraData () {
   let data = obterData();
+  mostrarResultados(data);
+}
+// atualiza diminuindo a data
+function diminuiData () { 
+  let data = obterData();
+  let dia = data.dia; 
+  let mes = data.mes; 
+  let ano = data.ano; 
+  
+
+  dia -= 1; 
+  if (dia < 1) {
+    mes -= 1; 
+    dia = verificaQuantidadeDiasMes(mes); 
+    if (mes < 1) {
+      mes = 12;
+      dia = verificaQuantidadeDiasMes(mes);
+      ano -= 1
+    }
+  }
+  data.dia = dia;
+  data.mes = mes;
+  data.ano = ano;
+  //return data;
+  mostrarResultados(data);
+}
+// atualiza aumentando a data
+function aumentaData () { 
+  let data = obterData();
+  let dia = data.dia; 
+  let mes = data.mes; 
+  let ano = data.ano; 
+
+  dia += 1; 
+  if (dia > verificaQuantidadeDiasMes(mes)) {
+    mes += 1; 
+    dia = 1;
+    if (mes > 12) {
+      mes = 1;
+      dia = 1
+      ano += 1
+    }
+  }
+  data.dia = dia;
+  data.mes = mes;
+  data.ano = ano;
+
+  mostrarResultados(data);
+  //return data;
+}
+
+
+
+function mostrarResultados(data) {
+  //let data = obterData();
+  //let data = aumentaData();
+  //let data = diminuiData();
   let nomeDoMes = converteNomeMes(data.mes);
   // Obtém a quantidade de dias no mês
   let quantidadeDias = verificaQuantidadeDiasMes(data.mes, data.ano);
   // Obtém o dia da semana para a data específica
   let diaSemana = verificaDiaSemanaQualquerData(data.dia, data.mes, data.ano);
   // Exibe a saída com ambas as informações
-
-
-
-
 
   const outputTextA = document.getElementById('qualSemana');
   const outputTextB = document.getElementById('quantosDias');
@@ -104,8 +163,9 @@ function mostrarResultados() {
     outputTextA.innerHTML = `O dia <span class="destaque">${data.dia}/${data.mes}/${data.ano}</span> caiu numa ${diaSemana}.`;
     outputTextB.innerHTML = `O mês de <span class="destaque">${nomeDoMes}</span> tem ${quantidadeDias} dias.`;
     outputTextC.innerHTML = `O ano <span class="destaque">${data.ano}</span>  ${verificaSeAnoBissexto(data.ano) ? 'é bisexto' : 'não é bisexto'}`;
-  } 
+  }
+
 }
 
 
-mostrarResultados();
+
