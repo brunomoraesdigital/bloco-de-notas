@@ -31,7 +31,7 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
   /*
   text-shadow:
@@ -97,7 +97,6 @@ button:hover[type="button"]  {
   display: none;
 }
 .formulario {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
