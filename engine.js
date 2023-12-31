@@ -112,35 +112,78 @@ function verificaQuantidadeDiasMes(mes, ano) {
 
 // [Função] para verificar o dia da semana para qualquer data
 function verificaDiaSemanaQualquerData(dia, mes, ano) {
-  if (mes < 3) {
+    if (mes < 3) {
       mes += 12;
       ano -= 1;
-  }
-  let q = dia;
-  let m = mes;
-  let k = ano % 100;
-  let j = Math.floor(ano / 100);
-  let h = (q + Math.floor((13 * (m + 1)) / 5) + k + Math.floor(k / 4) + Math.floor(j / 4) - 2 * j) % 7;
-  switch (h) {
+    }
+  
+    let q = dia;
+    let m = mes;
+    let k = ano % 100;
+    let j = Math.floor(ano / 100);
+    let h = (q + Math.floor((13 * (m + 1)) / 5) + k + Math.floor(k / 4) + Math.floor(j / 4) - 2 * j) % 7;
+  
+    // Obtém a data atual
+    const dataAtual = new Date();
+    const anoAtual = dataAtual.getFullYear();
+    const mesAtual = dataAtual.getMonth() + 1; // Meses começam do zero
+    const diaAtual = dataAtual.getDate();
+  
+    switch (h) {
       case 0:
-          return 'sábado';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu num sábado'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje num sábado'
+          : 'ocorrerá num sábado';
+  
       case 1:
-          return 'domingo';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu num domingo'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje num domingo'
+          : 'ocorrerá num domingo';
+  
       case 2:
-          return 'segunda-feira';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu numa segunda-feira'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje numa segunda-feira'
+          : 'ocorrerá numa segunda-feira';
+  
       case 3:
-          return 'terça-feira';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu numa terça-feira'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje numa terça-feira'
+          : 'ocorrerá numa terça-feira';
+  
       case 4:
-          return 'quarta-feira';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu numa quarta-feira'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje numa quarta-feira'
+          : 'ocorrerá numa quarta-feira';
+  
       case 5:
-          return 'quinta-feira';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu numa quinta-feira'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje numa quinta-feira'
+          : 'ocorrerá numa quinta-feira';
+  
       case 6:
-          return 'sexta-feira';
+        return ano < anoAtual || (ano === anoAtual && mes < mesAtual) || (ano === anoAtual && mes === mesAtual && dia < diaAtual)
+          ? 'ocorreu numa sexta-feira'
+          : ano === anoAtual && mes === mesAtual && dia === diaAtual
+          ? 'ocorre hoje numa sexta-feira'
+          : 'ocorrerá numa sexta-feira';
+  
       default:
-          return 'algo deu errado: 1';
+        return 'algo deu errado';
+    }
   }
-}
-
+  
 // [Função] para converter o número do mês para o nome do mês
 function converteNomeMes(mes) {
   let nomeDoMes =
@@ -176,8 +219,11 @@ function mostrarResultados(data) {
 
   // Atualiza os elementos no DOM com as informações obtidas
   if (data.ano) {
-      outPutTextA.innerHTML = `O dia <span class="destaque">${data.dia}/${data.mes}/${data.ano}</span> caiu numa ${diaSemana}.`;
+      outPutTextA.innerHTML = `O dia <span class="destaque">${data.dia}/${data.mes}/${data.ano}</span> ${diaSemana}.`;
       outPutTextB.innerHTML = `O mês de <span class="destaque">${nomeDoMes}</span> tem ${quantidadeDias} dias.`;
       outPutTextC.innerHTML = `O ano <span class="destaque">${data.ano}</span>  ${verificaSeAnoBissexto(data.ano) ? 'é bissexto' : 'não é bissexto'}`;
   }
 }
+
+
+
