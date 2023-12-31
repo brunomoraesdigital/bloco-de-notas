@@ -170,14 +170,14 @@ function mostrarResultados(data) {
   let diaSemana = verificaDiaSemanaQualquerData(data.dia, data.mes, data.ano);
 
   // Seleciona os elementos no DOM
-  const outputTextA = document.getElementById('qualSemana');
-  const outputTextB = document.getElementById('quantosDias');
-  const outputTextC = document.getElementById('anoBisexto');
+  const outPutTextA = document.getElementById('qualSemana');
+  const outPutTextB = document.getElementById('quantosDias');
+  const outPutTextC = document.getElementById('anoBisexto');
 
   // Atualiza os elementos no DOM com as informações obtidas
   if (data.ano) {
-      outputTextA.innerHTML = `O dia <span class="destaque">${data.dia}/${data.mes}/${data.ano}</span> caiu numa ${diaSemana}.`;
-      outputTextB.innerHTML = `O mês de <span class="destaque">${nomeDoMes}</span> tem ${quantidadeDias} dias.`;
-      outputTextC.innerHTML = `O ano <span class="destaque">${data.ano}</span>  ${verificaSeAnoBissexto(data.ano) ? 'é bissexto' : 'não é bissexto'}`;
+      outPutTextA.innerHTML = `O dia <span class="destaque">${data.dia}/${data.mes}/${data.ano}</span> caiu numa ${diaSemana}.`;
+      outPutTextB.innerHTML = `O mês de <span class="destaque">${nomeDoMes}</span> tem ${quantidadeDias} dias.`;
+      outPutTextC.innerHTML = `O ano <span class="destaque">${data.ano}</span>  ${verificaSeAnoBissexto(data.ano) ? 'é bissexto' : 'não é bissexto'}`;
   }
 }
