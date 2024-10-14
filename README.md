@@ -25,11 +25,15 @@ Este projeto foi desenvolvido para praticar e aprender manipulação de datas em
 
 O usuário seleciona uma data através de um campo de input.
 
-2. Incrementar/Decrementar Data:
+2. Pressionar Carregar
+
+As informações serão carregadas com base na data escolhida.
+
+4. Incrementar/Decrementar Data:
 
 Ao clicar nos botões, a data pode ser aumentada ou diminuída, ajustando automaticamente o mês e o ano quando necessário.
 
-3. Exibir Resultados:
+4. Exibir Resultados:
 
 Informações como o dia da semana da data selecionada, a quantidade de dias no mês e se o ano é bissexto são mostradas na página.
 
@@ -52,13 +56,13 @@ Informações como o dia da semana da data selecionada, a quantidade de dias no 
 Clone o repositório e abra o arquivo HTML no seu navegador:
 
 ```bash
-
 git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
 ## Como Usar
 1. Insira uma data no campo de input.
-2. Use os botões para incrementar ou decrementar a data.
-3. Veja os resultados diretamente na página.
+2. Pressione Carregar para mostrar as informações.
+3. Use os botões para incrementar ou decrementar a data.
+4. Veja os resultados diretamente na página.
 
 ## Licença
 
