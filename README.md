@@ -3,7 +3,8 @@
 Este projeto foi desenvolvido para praticar e aprender manipulação de datas em JavaScript. Ele contém funções que permitem selecionar, incrementar e decrementar datas, exibindo informações úteis no DOM, como o dia da semana, a quantidade de dias no mês e se o ano selecionado é bissexto.
 
 
-[Ver Demonstração](https://brunomoraesdigital.github.io/operacoes-com-datas-em-javascript/)
+<a href="https://brunomoraesdigital.github.io/operacoes-com-datas-em-javascript/" target="_blank">Ver Demonstração</a>
+
 
 ## Funcionalidades
 - Manipulação de Entrada de Data:
