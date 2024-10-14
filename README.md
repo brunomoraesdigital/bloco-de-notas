@@ -1,6 +1,7 @@
-# operacoes-com-datas-em-javascript
+# Operacoes com datas em javascript
 
-Este projeto contém funções em JavaScript para manipulação de datas, exibição de informações relevantes no DOM e fornecer um feedback amigável ao usuário. Você pode selecionar, incrementar e decrementar datas, e o aplicativo exibirá o dia da semana, o número de dias no mês selecionado e se o ano escolhido é bissexto ou não.
+Este projeto foi desenvolvido para praticar e aprender manipulação de datas em JavaScript. Ele contém funções que permitem selecionar, incrementar e decrementar datas, exibindo informações úteis no DOM, como o dia da semana, a quantidade de dias no mês e se o ano selecionado é bissexto.
+
 
 [Ver Demonstração](https://brunomoraesdigital.github.io/operacoes-com-datas-em-javascript/)
 
