@@ -49,7 +49,7 @@ Informações como o dia da semana da data selecionada, a quantidade de dias no 
 - converteNomeMes(mes): Converte o número do mês para o seu nome correspondente.
 - mostrarResultados(data): Atualiza o DOM com as informações da data processada.
 
-## Problemas observados a Serem Resolvidos
+## Problemas Observados a Serem Resolvidos
 
 - [ ] Implementar atualização do DOM ao digitar ou selecionar uma nova data.
   
